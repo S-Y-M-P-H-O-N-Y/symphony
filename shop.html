@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>body{background-image:url(black-background-gif-7.gif)}</style>
+    <title>Shopping Store</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="symphony.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/26/26304.png">
+    <script src="shop.js"></script>
+</head>
+<body>
+    <div class="header sticky">
+        <div class="header-right">
+          <a class="active" href="symphony.html">Home</a> 
+          <a href="About.html">About</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Tuto.html">Tutorial</a>
+          <a href="virtualpiano.html">Virtual piano</a>
+        </div>
+    </div>
+    <img id ="chariou"src="images (1).png" width="80px" onclick="chario()">
+    <div class= "container" >
+        <div class = "card" id = "item1">
+            <img src="71Qe0QMEaxL._AC_SX679_.jpg" >
+            <div class = "title">Kit Korg B2 </div>
+            <div>
+                <label class="title1">Kit</label>
+                <select >
+                    <option >Korg B2 88-Key Digital Piano</option>
+                    <option >Music Rest</option>
+                    <option >Damper Pedal</option>
+                    <option >Keyboard Stand</option>
+                </select>
+            </div>
+            <div class = "title1" id="price1"><b> 1880 DT </b></div>
+            <button  id ="b1" onclick="addToCart()">  Add To Cart </button>
+        </div>
+        <div class = "card" id = "item2">
+            <img src="91CS0eGcsXL._AC_SX679_.jpg" >
+            <div class = "title">MKit The RockJam 761 </div>
+            <div>
+                <label class="title1">Kit  </label>
+                <select >
+                    <option >761 piano keyboard</option>
+                    <option >Record and playback </option>
+                    <option >Keyboard stand </option>
+                    <option >Padded seat </option>
+                </select>
+            </div>
+            <div class = "title1" id="price2"> <b> 1140 DT</b>  </div>
+            <button id ="b2" onclick="addToCart1()"> Add To Cart </button>
+        </div>
+        <div class = "card" id = "item3">
+            <img src="51GtwuZk+7L._SY344_BO1,204,203,200_.jpg" >
+            <div class = "title">Big Book of Beginner's Piano </div>
+            <div>
+                <label class="title1">Kit </label>
+                <select >
+                    <option >Classic</option>
+                    <option >Pop</option>
+                    <option >Jazz</option>
+                    <option >Popular</option>
+                </select>
+            </div>
+            <div class = "title1" id="price3"> <b> 2400 DT</b>  </div>
+            <button onclick="addToCart2()"> Add To Cart </button>
+            
+    </div>
+    
+    
+    <div id="columns"  >
+        <ul class="price">
+          <li class="header">Purchase</li>
+          <li class="grey" id="price"> <b> 0 DT </b>  </li>
+          <li class="grey"><a href="#" class="button" > <button id="buy" onclick="buy()">proceed to payment </button> </a></li>
+          <li class="grey"><a href="#" class="button" ><button id="remove" onclick="remove()"> remove</button> </a></li>
+        </ul>
+      </div>
+    <script>$("#columns").hide()</script>
+</body>
+</html

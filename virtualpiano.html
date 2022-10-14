@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="s.css">
+    <script src="s.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/26/26304.png">
+    <title>P I A N O</title>
+</head>
+
+<body>
+    <section>
+        <div class="navbar" id="nav">
+            <div class="more">
+
+                <button class="btn" onclick="levels()">Levels
+                    <i class="fa fa-caret-down"></i>
+                </button><img class="home" src="home.JPEG" style="width:30px">
+                <div class="more-menu">
+                    <a onclick="l1()">level 1 </a>
+                    <a onclick="l2()">level 2</a>
+                    <a onclick="l3()">level 3</a>
+                </div>
+
+                <video playsinline autoplay muted loop id='bgvid'
+                    poster='http://carolinegabriel.com/demo/js-keyboard/video/bg.jpg'>
+                    <source src='http://carolinegabriel.com/demo/js-keyboard/video/bg.mp4' type='video/mp4'>
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <div id="wrap">
+        <header>
+            <h1 style="margin-bottom: 50px">Symphony</h1>
+            <img id="level1" src="level1.jpg" style="width:350px">
+            <img id="level2" src="level2.jpg" style="width:350px">
+            <img id="level3" src="level3.jpg" style="width:465px">
+        </header>
+        <br></br>
+    </div>
+    <div style="margin-top: 50px" class="piano-container-inside">
+        <div data-key="65" class="piano-key">
+            <div class="piano-top"></div>
+            <div class="piano-btm">A</div>
+        </div>
+        <div data-key="66" class="piano-key">
+            <div class="piano-top"></div>
+            <div class="piano-btm">B</div>
+        </div>
+        <div data-key="67" class="piano-key">
+            <div class="piano-top"></div>
+            <div class="piano-btm">C</div>
+        </div>
+        <div data-key="68" class="piano-key">
+            <div class="piano-top"></div>
+            <div class="piano-btm">D</div>
+        </div>
+        <div data-key="69" class="piano-key">
+            <div class="piano-top"></div>
+            <div class="piano-btm">E</div>
+        </div>
+        <div data-key="70" class="piano-key">
+            <div class="piano-top"></div>
+            <div class="piano-btm">F</div>
+        </div>
+        <div data-key="71" class="piano-key">
+            <div class="piano-top"></div>
+            <div class="piano-btm">G</div>
+        </div>
+    </div>
+   
+    <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+    <audio data-key="66" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+    <audio data-key="67" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+    <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+    <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+    <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+    <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+    
+    <script>
+        $("#level1").hide()
+        $("#level2").hide()
+        $("#level3").hide()
+    </script>
+</body>
+
+</html>

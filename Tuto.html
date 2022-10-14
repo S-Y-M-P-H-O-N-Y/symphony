@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="symphony.css">
+
+<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/26/26304.png">
+<link rel="stylesheet" href="tuto.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="tuto.js"></script>
+    <title>tuto</title>
+</head>
+<body>
+    <center>
+    <div class="header sticky">
+        <div class="header-right">
+          <a class="active" href="symphony.html" onclick="$('#audio')">Home</a> 
+          <a href="About.html">About</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Tuto.html">Tutorial</a>
+          <a href="virtualpiano.html">Virtual piano</a>
+          <input class="search"></input>
+          <button id="searchbtn">search</button>
+        </div>
+    </div>
+    <div id="all"  >
+    
+        <div class="column" >
+          <h2>Alan Walker - Faded | EASY Piano Tutorial</h2>
+          <iframe width="320" height="240"
+            src="alanwalker.mp4">
+            </iframe>
+        </div>
+        <div class="column" >
+          <h2>Married Life | BEGINNER PIANO TUTORIAL</h2>
+          <iframe width="320" height="240"
+            src="married.mp4">
+            </iframe>
+        </div>
+        <div class="column" >
+          <h2>Frank Sinatra - Fly Me To The Moon</h2>
+          <iframe width="320" height="240"
+            src="Frank.mp4">
+            </iframe>
+        </div>
+    
+      
+        <div class="column" >
+          <h2>John Legend - All Of Me</h2>
+          <iframe width="320" height="240"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            
+            </iframe>
+        </div>
+        <div class="column" >
+          <h2>Billie Eilish - "lovely"</h2>
+          <iframe width="320" height="240"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+        <div class="column" >
+          <h2>Remember Me - Coco</h2>
+          <iframe width="320" height="240"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+      
+      
+        <div class="column" >
+          <h2>Baby Shark Song</h2>
+          <iframe width="320" height="240"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+        <div class="column" >
+          <h2>Coffin Dance | BEGINNER PIANO TUTORIAL</h2>
+          <iframe width="320" height="240"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+        <div class="column" >
+          <h2>Dance Monkey - Tones</h2>
+          <iframe width="320" height="240"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+      
+    </div>
+    </center>
+<script>var songs =[
+    {name:'Alan Walker - Faded | EASY Piano Tutorial',src:'alanwalker.mp4',
+    
+    },
+    {name:'Married Life | BEGINNER PIANO TUTORIAL',src:'married.mp4',
+    
+    },
+    {name:'Frank Sinatra - Fly Me To The Moon',src:'Frank.mp4',
+    
+    },
+    {name:'John Legend - All Of Me',src:'https://www.youtube.com/embed/tgbNymZ7vqY',
+    
+    },
+    {name:'Billie Eilish - "lovely"',src:"https://www.youtube.com/embed/tgbNymZ7vqY",
+    
+    },
+    {name:'Remember Me - Coco',src:'https://www.youtube.com/embed/tgbNymZ7vqY',
+    
+    }
+    
+    
+
+    ]
+  
+    var helement=[]
+    for (let i = 0; i <10; i++) {
+        
+       helement.push($('h2').eq(i).text())
+    
+        
+    }
+    
+    
+    $('#searchbtn').click(function () {
+        $('#all').empty()
+        
+        for (let i = 0; i < songs.length; i++) {
+           
+            if(songs[i].name==$('.search').val()){
+               
+                $('#all').append('<div><iframe width="320" height="240"src='+ songs[i].src+'></iframe></div>')
+              
+            
+        }}
+    })
+</script>
+</body>
+</html>
