@@ -1,14 +1,14 @@
 * {
   box-sizing: border-box;
 }
-/* Create three equal columns that floats next to each other */
+
 .column {
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px; 
 }
-/* Clear floats after the columns */
+
 .row:after {
    display: table;
   clear: both;
@@ -22,3 +22,14 @@
      height: 400px;
      width: 425px;
  }
+ #searchbtn{box-shadow: 0px 0px 0px 0px #000000;
+	background-color:#000000;
+	border-radius:34px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	padding:6px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #15420e;}

@@ -14,7 +14,7 @@
     <div class="header sticky">
         <div class="header-right">
           <a class="active" href="symphony.html" onclick="$('#audio')">Home</a> 
-          <a href="About.html">About</a>
+         
           <a href="Shop.html">Shop</a>
           <a href="Tuto.html">Tutorial</a>
           <a href="virtualpiano.html">Virtual piano</a>
@@ -22,7 +22,7 @@
           <button id="searchbtn">search</button>
         </div>
     </div>
-    <div id="all"  >
+    <div id="all">
     
         <div class="column" >
           <h2>Alan Walker - Faded | EASY Piano Tutorial</h2>
@@ -86,49 +86,25 @@
       
     </div>
     </center>
-<script>var songs =[
-    {name:'Alan Walker - Faded | EASY Piano Tutorial',src:'alanwalker.mp4',
-    
-    },
-    {name:'Married Life | BEGINNER PIANO TUTORIAL',src:'married.mp4',
-    
-    },
-    {name:'Frank Sinatra - Fly Me To The Moon',src:'Frank.mp4',
-    
-    },
-    {name:'John Legend - All Of Me',src:'https://www.youtube.com/embed/tgbNymZ7vqY',
-    
-    },
-    {name:'Billie Eilish - "lovely"',src:"https://www.youtube.com/embed/tgbNymZ7vqY",
-    
-    },
-    {name:'Remember Me - Coco',src:'https://www.youtube.com/embed/tgbNymZ7vqY',
-    
-    }
-    
-    
-
-    ]
-  
+<script>
+  //array with the name and the src of the video
+var songs =[
+    {name:'Alan Walker - Faded | EASY Piano Tutorial',src:'alanwalker.mp4',},
+    {name:'Married Life | BEGINNER PIANO TUTORIAL',src:'married.mp4',},
+    {name:'Frank Sinatra - Fly Me To The Moon',src:'Frank.mp4', },
+    {name:'John Legend - All Of Me',src:'https://www.youtube.com/embed/tgbNymZ7vqY',},
+    {name:'Billie Eilish - "lovely"',src:"https://www.youtube.com/embed/tgbNymZ7vqY",},
+    {name:'Remember Me - Coco',src:'https://www.youtube.com/embed/tgbNymZ7vqY',} ]
+  //tha arry where we push all the element with the "<h2>"
     var helement=[]
     for (let i = 0; i <10; i++) {
-        
        helement.push($('h2').eq(i).text())
-    
-        
     }
-    
-    
-    $('#searchbtn').click(function () {
-        $('#all').empty()
-        
+    $('#searchbtn').click(function () {//when we click the button search 
+        $('#all').empty()// the division that hold all the video ganna desepere
         for (let i = 0; i < songs.length; i++) {
-           
-            if(songs[i].name==$('.search').val()){
-               
-                $('#all').append('<div><iframe width="320" height="240"src='+ songs[i].src+'></iframe></div>')
-              
-            
+            if(songs[i].name==$('.search').val()){    // if the array of sangs = to the string writen in the search input 
+                $('#all').append('<div><iframe width="320" height="240"src='+ songs[i].src+'></iframe></div>')// dsplay the div that contains the serched input
         }}
     })
 </script>
